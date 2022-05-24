@@ -1,4 +1,5 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 const LandPage = () => {
     return (
@@ -49,12 +50,16 @@ const LandPage = () => {
             </Row>
 
             <Row md={2} className="g-5">
-                <Button href="/login">
-                    Log In
-                </Button>
-                <Button href="/shop">
-                    Ir al Shop
-                </Button>
+                <Link to='/login'>
+                    <Button>
+                        Log In
+                    </Button>
+                </Link>
+                <Link to='/shop'>
+                    <Button>
+                        Ir al Shop
+                    </Button>
+                </Link>
             </Row>
         </Container>
     )

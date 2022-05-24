@@ -1,11 +1,11 @@
 import { Card, Container, Button, Form } from "react-bootstrap"
 import { useRef } from "react"
+import { Link } from "react-router-dom";
 
-const CrearCuenta = () => {
-    const usernameRef = useRef ();
+
+const Login = () => {
     const emailRef = useRef ();
     const passwordRef = useRef ();
-    const confirmPasswordRef = useRef ();
 
     return (
         <>
@@ -16,10 +16,6 @@ const CrearCuenta = () => {
                             Accedé a tu cuenta
                         </h2>
                         <Form>
-                            <Form.Group id="username">
-                                <Form.Label> Username</Form.Label>
-                                <Form.Control type="text" ref={usernameRef} required />
-                            </Form.Group>
                             <Form.Group id="email">
                                 <Form.Label> Email</Form.Label>
                                 <Form.Control type="email" ref={emailRef} required />
@@ -28,23 +24,21 @@ const CrearCuenta = () => {
                                 <Form.Label> Password</Form.Label>
                                 <Form.Control type="password" ref={passwordRef} required />
                             </Form.Group>
-                            <Form.Group id="confirmPassword">
-                                <Form.Label> Confirm Password</Form.Label>
-                                <Form.Control type="password" ref={confirmPasswordRef} required />
-                            </Form.Group>
                             <Button type="submit" className="m-4"> Accede</Button>
                         </Form>
                     </Card.Body>
                 </Card>
                 <div className="text-center "> 
-                    ¿Ya tienes una cuenta?
-                    <Button href="/login" className="m-4">
-                        Log In
-                    </Button>
+                    ¿No tienes una cuenta?
+                    <Link to='/crear-cuenta'>
+                        <Button className="m-4">
+                            Crear Cuenta
+                        </Button>
+                    </Link>
                 </div>
             </Container>
         </>
     )
 }
 
-export default CrearCuenta
+export default Login
