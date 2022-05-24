@@ -1,4 +1,5 @@
-import { Col, Container, Nav, NavItem, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 
 const Header = () => {
@@ -6,22 +7,29 @@ const Header = () => {
     <div className="header">
         <Container fluid>
             <Row className="align-content-center">
-                <Col className="title" md={3}>Patitas Pequeñas</Col>
-                <Col md={7} className="barraNavegacion" >
-                    <Nav className="justify-content-around">
-                        <NavItem>
-                            <p>Perros</p>
-                        </NavItem>
-                        <NavItem>
-                            Gatos
-                        </NavItem>
-                        <NavItem>
-                            Merch
-                        </NavItem>
-                    </Nav>
+                <Col className="title" md={3}>
+                    <Link to='/'>
+                        Patitas Pequeñas
+                    </Link>
                 </Col>
-                <Col md={1}>log in</Col>
-                <Col md={1}>Carrito</Col>
+
+                <Col md={7}  >
+                    <div>
+
+                    </div>
+                </Col>
+
+                <Col className="navCol" md={1}>
+                    <Link to='/login'>
+                        log in
+                    </Link>
+                </Col>
+
+                <Col md={1}>
+                    <Link to="/shop">
+                        Shop
+                    </Link>
+                </Col>
             </Row>
         </Container>
     </div>
