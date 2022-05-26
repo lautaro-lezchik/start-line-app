@@ -1,5 +1,10 @@
+import { useContext } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import LoginContext from "../context/LoginContext"
+import Greeting from "./Greeting"
+import LoginLogout from "./LoginLogout"
+
 
 
 const Header = () => {
@@ -8,25 +13,19 @@ const Header = () => {
         <Container fluid>
             <Row className="align-content-center">
                 <Col className="title" md={3}>
-                    <Link to='/'>
+                    <Link to='/' className="linksHeader">
                         Patitas Pequeñas
                     </Link>
                 </Col>
 
                 <Col md={7}  >
-                    <div>
-
-                    </div>
+                    <Greeting />
                 </Col>
 
-                <Col className="navCol" md={1}>
-                    <Link to='/login'>
-                        log in
-                    </Link>
-                </Col>
+                <LoginLogout />
 
                 <Col md={1}>
-                    <Link to="/shop">
+                    <Link to="/shop" className="linksHeader">
                         Shop
                     </Link>
                 </Col>

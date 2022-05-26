@@ -1,7 +1,9 @@
 import { Card, Container, Button, Form } from "react-bootstrap"
-import { useRef, useState } from "react"
+import { useContext, useRef, useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import LoginContext from "../context/LoginContext";
+//import context from "react-bootstrap/esm/AccordionContext";
 
 
 const Login = () => {
@@ -11,19 +13,25 @@ const Login = () => {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     
+    const context = useContext(LoginContext)
 
     async function handleSubmit(e) {
         e.preventDefault()
 
         const auth = getAuth();
         signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
+        .then(() => 
+            context.getLogin(true)
+        )
         .then(() => {
             setError("");
             setLoading(true);
             navigate("/shop");
         })
-        .catch(() => {
-            setError("No se ha podido ingresar")
+        .catch((e) => {
+            setError("No se ha podido ingresar");
+            console.log("se va por el catch", e);
+            //context.getLogin(false);
             // ..
         });
 

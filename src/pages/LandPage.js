@@ -19,7 +19,7 @@ const LandPage = () => {
             <Row>
                 <Col>
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="https://phantom-marca.unidadeditorial.es/5f35dc7ba0a175d12db238a6c6e8d549/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/24/16456899624763.jpg" />
+                        <Card.Img variant="top" src="https://firebasestorage.googleapis.com/v0/b/auth-usuarios-e1ad7.appspot.com/o/perros-3.jpg?alt=media&token=2fceaa5b-e442-41b7-918e-a5066a49643e" />
                         <Card.Body>
                             <Card.Title>Accesorios para perros</Card.Title>
                         </Card.Body>
@@ -27,7 +27,7 @@ const LandPage = () => {
                 </Col>
                 <Col>
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/purina-por-que-vemos-tan-felices-a-los-gatos-en-cajas-de-carton.png?itok=xABhZ8v9" />
+                        <Card.Img variant="top" src="https://firebasestorage.googleapis.com/v0/b/auth-usuarios-e1ad7.appspot.com/o/gatos-1.jpg?alt=media&token=efeedc1a-d427-4527-8fed-380b2630d7cf" />
                         <Card.Body>
                             <Card.Title>Accesorios para gatos</Card.Title>
                         </Card.Body>
@@ -35,7 +35,7 @@ const LandPage = () => {
                 </Col>
                 <Col>
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="https://m.media-amazon.com/images/I/811nm2k-OgL._SY500_.jpg" />
+                        <Card.Img variant="top" src="https://firebasestorage.googleapis.com/v0/b/auth-usuarios-e1ad7.appspot.com/o/merch-2.jpg?alt=media&token=ffbeb378-6925-4e5e-ba02-17860ffc85dd" />
                         <Card.Body>
                             <Card.Title>Para amantes de las mascotas</Card.Title>
                         </Card.Body>

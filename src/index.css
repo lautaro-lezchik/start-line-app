@@ -4,16 +4,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;1,300&display=swap');
 
+*{
+  margin:0;
+  padding: 0;
+}
+
 /* --- PALETA DE COLORES --- */
 :root {
   --col-1-fuerte:#F20519;
-  --col-general:#D0D7D9;
+  --col-general:#808485;
 }
 
 body {
   background-color: var(--col-general);
   font-family: 'Chivo', sans-serif;
 }
+
 
 
 
@@ -40,6 +46,11 @@ body {
   margin-bottom: 0!important;
 }
 
+.linksHeader  {
+  color:#fff;
+  text-decoration: none;
+
+}
 /*----- LANDPAGE --------*/
 .landPageTitle {
   font-size: 5rem;
@@ -48,3 +59,30 @@ body {
 
 
 /*----- LOGIN --------*/
+
+
+/*----- SHOP --------*/
+.pagebg{
+  background-color: #a0a5a7;
+  padding-top: 0;
+}
+.productsGrid {
+  padding:5% 10%;
+}
+.filterMenu {
+  list-style-type: none;
+}
+.filterMenu li {
+  float: left;
+  padding: 0.5rem 2rem;
+}
+.filterMenu li a{
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.imgShopItem img {
+  width: 50%;
+  margin:auto
+}
