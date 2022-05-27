@@ -59,12 +59,18 @@ body {
 
 
 /*----- LOGIN --------*/
-
+.loginContainer{
+  margin-top: 20%;
+}
+.formHeaderError{
+  height: 40px;
+}
 
 /*----- SHOP --------*/
 .pagebg{
   background-color: #a0a5a7;
   padding-top: 0;
+  margin-top: -1rem;
 }
 .productsGrid {
   padding:5% 10%;
@@ -81,8 +87,19 @@ body {
   text-align: center;
   padding: 16px;
   text-decoration: none;
+  color:#3130ab;
 }
+.imgShopItem{
+  padding: 10px;
+  text-align: center;
+}
+
 .imgShopItem img {
   width: 50%;
   margin:auto
 }
+
+.productName p{
+  font-size: 1.3rem;
+}
+

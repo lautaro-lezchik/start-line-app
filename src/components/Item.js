@@ -3,18 +3,36 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
 import { Button, Col, Row } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+//import context from 'react-bootstrap/esm/AccordionContext';
+import LoginContext from '../context/LoginContext';
+import { useContext } from "react"
+
 
 
 
 
     export default function Item ({id, image , name, price}) {
-        /* const avisoCompra = alert(`compraste ${name}`) */
+    const context = useContext(LoginContext)
+        
 
+        const purchaseNotification = ()=>{
+            toast.success(`Compraste ${name}`, {
+                position: "top-left",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+                console.log({id, image , name, price});
+                context.cart({id, image , name, price})
+        }
     return (
         <>
-        <Link to={`/item/${id}`}>
             <Card sx={{ maxWidth: 400 }} className="imgShopItem" key={id}>
                     <CardMedia
                         component="img"
@@ -23,8 +41,8 @@ import { Button, Col, Row } from 'react-bootstrap';
                         alt=""
                         />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            {name}
+                        <Typography gutterBottom variant="h5" component="div" >
+                            <p className='productName'>{name}</p>
                         </Typography>
                     </CardContent>
                 <Row>
@@ -36,11 +54,21 @@ import { Button, Col, Row } from 'react-bootstrap';
                 </Row>
                 <Row>
                     <Col>
-                        <Button>Comprar</Button>
+                        <Button onClick={purchaseNotification}>Comprar</Button>
+                        <ToastContainer
+                            position="top-left"
+                            autoClose={1000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss
+                            draggable
+                            pauseOnHover
+                        />
                     </Col>
                 </Row>
             </Card>
-        </Link>
         </>
     );
 }

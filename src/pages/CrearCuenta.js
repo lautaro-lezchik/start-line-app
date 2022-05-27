@@ -1,7 +1,10 @@
 import { Card, Container, Button, Form } from "react-bootstrap"
 import { useRef, useState } from "react"
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import BelowCard from "../components/formComponents/BelowCard";
+import FormHeader from "../components/formComponents/FormHeader";
+import FormGroup from "../components/formComponents/FormGroup";
 
 
 const CrearCuenta = () => {
@@ -30,7 +33,6 @@ const CrearCuenta = () => {
         })
         .catch(() => {
             setError("No se ha podido crear la cuenta")
-            // ..
         });
 
         setLoading(false)
@@ -39,41 +41,20 @@ const CrearCuenta = () => {
     return (
         <>
             <Container className="w-50">
-                <Card>
-                    <Card.Body className="text-center">
-                        <h2>
-                            Crea cuenta
-                        </h2>
-                        <div>{error && 
-                            <div className="text-danger m-4">
-                                {error}
-                            </div>}
-                        </div>
-                        <Form onSubmit={handleSubmit}>
-                            <Form.Group id="email">
-                                <Form.Label> Email</Form.Label>
-                                <Form.Control type="email" ref={emailRef} required />
-                            </Form.Group>
-                            <Form.Group id="password">
-                                <Form.Label> Password</Form.Label>
-                                <Form.Control type="password" ref={passwordRef} required />
-                            </Form.Group>
-                            <Form.Group id="confirmPassword">
-                                <Form.Label> Confirm Password</Form.Label>
-                                <Form.Control type="password" ref={confirmPasswordRef} required />
-                            </Form.Group>
-                            <Button type="submit" className="m-4"> Crear la cuenta</Button>
-                        </Form>
-                    </Card.Body>
-                </Card>
-                <div className="text-center "> 
-                    ¿Ya tienes una cuenta?
-                    <Link to='/login'>
-                        <Button disabled={loading} className="m-4">
-                            Log In
-                        </Button>
-                    </Link>
+                <div className="loginContainer">
+                    <Card>
+                        <Card.Body className="text-center">
+                            <FormHeader error={error} />
+                            <Form onSubmit={handleSubmit}>
+                                <FormGroup ide="email" lab="Email" ty="email" refer={emailRef}/>
+                                <FormGroup ide="password" lab="Password" ty="password" refer={passwordRef}/>
+                                <FormGroup ide="confirmPassword" lab="Confirm Password" ty="password" refer={confirmPasswordRef}/>
+                                <Button type="submit" className="m-4"> Crear la cuenta</Button>
+                            </Form>
+                        </Card.Body>
+                    </Card>
                 </div>
+                <BelowCard loading={loading} />
             </Container>
         </>
     )

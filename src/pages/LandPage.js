@@ -49,7 +49,7 @@ const LandPage = () => {
                 </h3>
             </Row>
 
-            <Row md={2} className="g-5">
+            <Row md={2} className="g-2 m-5">
                 <Link to='/login'>
                     <Button>
                         Log In

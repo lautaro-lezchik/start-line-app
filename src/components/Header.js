@@ -1,8 +1,7 @@
-import { useContext } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import LoginContext from "../context/LoginContext"
 import Greeting from "./Greeting"
+import HiddenRoutes from "./HiddenRoutes"
 import LoginLogout from "./LoginLogout"
 
 
@@ -17,17 +16,12 @@ const Header = () => {
                         Patitas Pequeñas
                     </Link>
                 </Col>
-
                 <Col md={7}  >
                     <Greeting />
                 </Col>
-
                 <LoginLogout />
-
                 <Col md={1}>
-                    <Link to="/shop" className="linksHeader">
-                        Shop
-                    </Link>
+                    <HiddenRoutes />
                 </Col>
             </Row>
         </Container>
