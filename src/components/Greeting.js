@@ -7,7 +7,7 @@ const Greeting = () => {
     const text = login ? "¡QUE BUENO VERTE DE NUEVO!" : ""
     
     return (
-        <div className='text-center'>{text}</div>
+        <div className='text-center mt-2'>{text}</div>
     ) 
 }
 
