@@ -41,8 +41,6 @@ const ProductsGrid = () => {
     }, []);
 
 
-
-
     return (
         <div className="pagebg">
         <Filter />

@@ -16,11 +16,13 @@ const Header = () => {
                         Patitas Pequeñas
                     </Link>
                 </Col>
-                <Col md={7}  >
+                <Col md={4}  >
                     <Greeting />
                 </Col>
-                <LoginLogout />
-                <Col md={1}>
+                <Col md={3}>
+                    <LoginLogout />
+                </Col>
+                <Col md={2}>
                     <HiddenRoutes />
                 </Col>
             </Row>

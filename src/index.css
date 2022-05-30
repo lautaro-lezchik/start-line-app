@@ -103,3 +103,13 @@ body {
   font-size: 1.3rem;
 }
 
+/* PRICE FORMAT */
+.price {
+  color:green;
+}
+
+.superscript {
+  font-size: x-small;
+  vertical-align: super;
+  color:green;
+}

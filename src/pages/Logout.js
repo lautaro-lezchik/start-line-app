@@ -16,7 +16,6 @@ signOut(auth)
     navigate('/')
 })
 .catch((error) => {
-    console.log("hay error", error);
     alert("Ha ocurrido un error, no hemos podido completar el logout")
 });
     return null

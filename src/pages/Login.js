@@ -6,7 +6,6 @@ import LoginContext from "../context/LoginContext";
 import FormGroup from "../components/formComponents/FormGroup";
 import BelowCard from "../components/formComponents/BelowCard";
 import FormHeader from "../components/formComponents/FormHeader";
-//import context from "react-bootstrap/esm/AccordionContext";
 
 
 const Login = () => {
@@ -32,9 +31,6 @@ const Login = () => {
         })
         .catch((e) => {
             setError("No se ha podido ingresar");
-            console.log("se va por el catch", e);
-            //context.getLogin(false);
-            // ..
         });
 
         setLoading(false)

@@ -10,11 +10,11 @@ const LoginLogout = () => {
     const path = login ? "/logout" : "/login"
     const text = login? "log out" : "Log in"
     return (
-        <Col className="navCol" md={1}>
-                    <Link to={path} className="linksHeader">
-                        {text}
-                    </Link>
-                </Col>
+        <Col className="navCol text-center mt-2" md={12}>
+            <Link to={path} className="linksHeader">
+                {text}
+            </Link>
+        </Col>
     )
     }
 

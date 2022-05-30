@@ -6,7 +6,6 @@ import Shop from "./pages/Shop";
 import Login from './pages/Login';
 import CrearCuenta from './pages/CrearCuenta';
 import Logout from './pages/Logout';
-import Cart from './pages/Cart';
 import { useContext } from 'react';
 import LoginContext from './context/LoginContext';
 import GetRedirected from './pages/GetRedirected';
@@ -24,7 +23,6 @@ function App() {
             <Route path='/login' element= {<Login />} />
             <Route path='/logout' element= {<Logout />} />
             <Route path='/crear-cuenta' element= {<CrearCuenta />} />
-            <Route path='/cart' element= {<Cart />} />
           </Routes>
       </BrowserRouter>
   );

@@ -6,9 +6,8 @@ const HiddenRoutes = () => {
     const {login} = useContext(LoginContext)
 
     return  login ? (
-        
         <div>
-            <Link to="/shop" className="linksHeader">
+            <Link to="/shop" className="linksHeader mt-2">
                 Shop
             </Link>
         </div>

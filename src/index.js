@@ -5,10 +5,8 @@ import App from './App';
 import LoginContext from './context/LoginContext';
 
 
-
 const ContextProvider = (props) => {
   const [login, setLogin] = useState (false)
-  const [cartList, setCartList] = useState([])
   
 
 
@@ -24,12 +22,7 @@ const ContextProvider = (props) => {
       setLogin(isLogged)
       console.log("llega state", isLogged);
     },
-    cart:(getCartList) =>{
-      setCartList(...cartList, getCartList)
-      console.log("llega cart", cartList);
-    },
     login,
-    cartList,
 }
 
   return (
@@ -43,7 +36,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ContextProvider>
-      <App />
+        <App />
     </ContextProvider>
   </React.StrictMode>
 );
