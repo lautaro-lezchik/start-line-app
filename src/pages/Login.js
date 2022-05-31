@@ -25,7 +25,7 @@ const Login = () => {
         .then(() => {
             setError("");
             setLoading(true);
-            context.getLogin(true)
+            context.setLogin(true)
             localStorage.setItem('isLogged', JSON.stringify(true));
             navigate("/shop");
         })

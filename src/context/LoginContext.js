@@ -1,7 +1,7 @@
 import React from "react";
 
 const LoginContext = React.createContext({
-    getLogin:"", 
+    setLogin:"", 
 })
 
 export default LoginContext

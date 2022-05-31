@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import LoginContext from './context/LoginContext';
+import { Provider } from 'react-redux';
+import myStore from './redux/Store';
+
 
 
 const ContextProvider = (props) => {
@@ -18,7 +21,7 @@ const ContextProvider = (props) => {
   }, []);
 
   const initialState ={
-    getLogin:(isLogged) =>{
+    setLogin:(isLogged) =>{
       setLogin(isLogged)
       console.log("llega state", isLogged);
     },
@@ -36,7 +39,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ContextProvider>
+      <Provider store={myStore}>
         <App />
+      </Provider>
     </ContextProvider>
   </React.StrictMode>
 );

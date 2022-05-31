@@ -7,10 +7,24 @@ import { Button, Col, Row } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PriceFormat from './PriceFormat';
+import { useDispatch } from 'react-redux';
 
 
 
     export default function Item ({id, image , name, price}) {
+        const dispatch = useDispatch()
+        
+        const productInfo = {
+            id:id,
+            image:image,
+            name:name,
+            price:price,
+        }
+
+        const sendToCart = () => {
+            dispatch({type:'ADD_TO_CART', payload: productInfo})
+            console.log("se envia producto", productInfo);
+        }
 
         const purchaseNotification = ()=>{
             toast.success(`Compraste ${name}`, {
@@ -48,7 +62,8 @@ import PriceFormat from './PriceFormat';
                 </Row>
                 <Row>
                     <Col>
-                        <Button onClick={purchaseNotification}>Comprar</Button>
+                        {/* <Button onClick={purchaseNotification}>Comprar</Button> */}
+                        <Button onClick={sendToCart}>Comprar</Button>
                         <ToastContainer
                             position="top-left"
                             autoClose={1000}

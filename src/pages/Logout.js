@@ -11,7 +11,7 @@ const Logout = () => {
 
 signOut(auth)
 .then(() => {
-    context.getLogin(false)
+    context.setLogin(false)
     localStorage.setItem('isLogged', JSON.stringify(false));
     navigate('/')
 })
