@@ -13,12 +13,24 @@ const myReducer = (state = initialState, action)=> {
 
     switch (action.type){
         case "ADD_TO_CART":
+            const newCart = [...state.cart,  action.payload]
         return {
 /*             ...state,
             cart:action.payload */
+/*             ...state,
+            cart: [...state.cart,  action.payload] , */
             ...state,
-            cart: [...state.cart,  action.payload] ,
+            cart: newCart,
+        }
 
+        case "DELETE_PRODUCT":
+            const productsArray = state.cart
+            let filter = productsArray.filter (item=>item.id!==action.payload);
+            console.log(filter);
+
+        return {
+            ...state,
+            cart: filter,
         }
 
         default:

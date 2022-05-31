@@ -113,3 +113,19 @@ body {
   vertical-align: super;
   color:green;
 }
+
+/*--CART---*/ 
+.CartItem{
+  padding: 10px;
+  text-align: center;
+  border:1px solid gray;
+  width:80%;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.CartItem img {
+  width: 20%;
+  margin:auto
+}
+
