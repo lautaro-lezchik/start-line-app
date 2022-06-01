@@ -22,7 +22,9 @@ const myReducer = (state = initialState, action)=> {
             : newProduct
 
             console.log("newItem",newItem);
-
+/*             const updatedCart =
+            (isInCart!==undefined)
+            ? cart  */
             const newCart = [...state.cart,  newItem]
         return {
             ...state,

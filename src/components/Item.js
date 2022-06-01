@@ -15,19 +15,19 @@ import { useDispatch } from 'react-redux';
         const dispatch = useDispatch()
         
         const productInfo = {
-            id:id,
-            image:image,
-            name:name,
-            price:price,
+            id,
+            image,
+            name,
+            price,
             qty:1,
         }
 
         const sendToCart = () => {
             dispatch({type:'ADD_TO_CART', payload: productInfo})
-            console.log("se envia producto", productInfo);
+            purchaseNotification()
         }
 
- /*        const purchaseNotification = ()=>{
+        const purchaseNotification = ()=>{
             toast.success(`Compraste ${name}`, {
                 position: "top-left",
                 autoClose: 1000,
@@ -37,8 +37,7 @@ import { useDispatch } from 'react-redux';
                 draggable: true,
                 progress: undefined,
                 });
-        } */
-
+        } 
 
     return (
         <>
@@ -63,7 +62,6 @@ import { useDispatch } from 'react-redux';
                 </Row>
                 <Row>
                     <Col>
-                        {/* <Button onClick={purchaseNotification}>Comprar</Button> */}
                         <Button onClick={sendToCart}>Comprar</Button>
                         <ToastContainer
                             position="top-left"
