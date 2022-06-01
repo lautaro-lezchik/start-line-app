@@ -13,12 +13,18 @@ const myReducer = (state = initialState, action)=> {
 
     switch (action.type){
         case "ADD_TO_CART":
-            const newCart = [...state.cart,  action.payload]
+            const newProduct=action.payload;
+            const isInCart = state.cart.find((product)=>product.id===newProduct.id);
+            console.log("ya esta en carrito",isInCart);
+
+            const newItem = isInCart!==undefined
+            ? { ...newProduct, qty: newProduct.qty + 1 }
+            : newProduct
+
+            console.log("newItem",newItem);
+
+            const newCart = [...state.cart,  newItem]
         return {
-/*             ...state,
-            cart:action.payload */
-/*             ...state,
-            cart: [...state.cart,  action.payload] , */
             ...state,
             cart: newCart,
         }
@@ -26,7 +32,6 @@ const myReducer = (state = initialState, action)=> {
         case "DELETE_PRODUCT":
             const productsArray = state.cart
             let filter = productsArray.filter (item=>item.id!==action.payload);
-            console.log(filter);
 
         return {
             ...state,

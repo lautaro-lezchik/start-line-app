@@ -10,7 +10,7 @@ const Header = () => {
     return (
     <div className="header">
         <Container fluid>
-            <Row className="align-content-center">
+            <Row className="align-content-center pt-2 pb-2">
                 <Col className="title" md={3}>
                     <Link to='/' className="linksHeader">
                         Patitas Pequeñas

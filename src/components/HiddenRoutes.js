@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import LoginContext from '../context/LoginContext'
+import CartIcon from './CartIcon'
 
 const HiddenRoutes = () => {
     const {login} = useContext(LoginContext)
@@ -19,9 +20,9 @@ const HiddenRoutes = () => {
                         </div>
                     </Col>
                     <Col md={6}>
-                        <div className='mt-2'>
+                        <div >
                             <Link to="/cart" className="linksHeader">
-                                Cart
+                                <CartIcon />
                             </Link>
                         </div>
                     </Col>

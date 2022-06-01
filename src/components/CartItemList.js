@@ -31,6 +31,10 @@ const CartItemList = () => {
                     </Col>
 
                     <Col>
+                        {item.qty}
+                    </Col>
+
+                    <Col>
                         <PriceFormat price={item.price} />
                     </Col>
 

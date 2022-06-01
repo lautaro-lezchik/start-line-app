@@ -49,8 +49,13 @@ body {
 .linksHeader  {
   color:#fff;
   text-decoration: none;
-
 }
+
+.shoppingCartIcon {
+  color:#fff;
+}
+
+
 /*----- LANDPAGE --------*/
 .landPageTitle {
   font-size: 5rem;

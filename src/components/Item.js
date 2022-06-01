@@ -19,6 +19,7 @@ import { useDispatch } from 'react-redux';
             image:image,
             name:name,
             price:price,
+            qty:1,
         }
 
         const sendToCart = () => {
@@ -26,7 +27,7 @@ import { useDispatch } from 'react-redux';
             console.log("se envia producto", productInfo);
         }
 
-        const purchaseNotification = ()=>{
+ /*        const purchaseNotification = ()=>{
             toast.success(`Compraste ${name}`, {
                 position: "top-left",
                 autoClose: 1000,
@@ -36,7 +37,7 @@ import { useDispatch } from 'react-redux';
                 draggable: true,
                 progress: undefined,
                 });
-        }
+        } */
 
 
     return (
