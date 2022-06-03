@@ -19,7 +19,6 @@ import { useDispatch } from 'react-redux';
             image,
             name,
             price,
-            qty:1,
         }
 
         const sendToCart = () => {

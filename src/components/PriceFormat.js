@@ -3,8 +3,8 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
 const PriceFormat = ({price}) => {
-    let fixedPrice = price;
-    let decimal = (fixedPrice + "").split(".")[1];
+    /* let fixedPrice = price; */
+    let decimal = (price + "").split(".")[2];
     let entero = (price + "").split(".")[0];
 
     return (

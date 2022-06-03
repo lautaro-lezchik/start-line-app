@@ -11,8 +11,6 @@ import myStore from './redux/Store';
 const ContextProvider = (props) => {
   const [login, setLogin] = useState (false)
   
-
-
   useEffect(() => {
     const isLogged = JSON.parse(localStorage.getItem('isLogged'));
     if (isLogged) {
